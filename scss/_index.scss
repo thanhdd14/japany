@@ -1,0 +1,215 @@
+@use "vars" as *;
+
+
+main{
+	padding-top: 60px;
+}
+.sec-mv{
+	background: $blue ;
+	color: white;
+	padding: 50px 0;
+}
+.mv-time{
+	@include flex(0,center);
+	width: 100%;
+	max-width: 370px;
+	margin: 0 auto;
+	&--left{
+		width: calc(100% - 100px);
+		position: relative;
+		padding: 0 30px;
+		@include font-size(10);
+
+	}
+	&--right{
+		width: 100px;
+	}
+	&__note{
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 43px;
+		li{
+			position: absolute;
+			padding: 3px 0 0;
+			&:after{
+				content: "";
+				width: 10px;
+				height: 1px;
+				background: rgba(white,0.5);
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+		.lv1{
+			bottom: 0;
+		}
+		.lv2{
+			bottom: calc(30% - 17px);
+		}
+		.lv3{
+			bottom: calc(53% - 17px);
+		}
+		.lv4{
+			bottom: calc(77% - 17px);
+		}
+		.lv5{
+			top: 0;
+		}
+	}
+	&__list{
+		@include flex(between,0);
+		&-item{
+			width: 20px;
+			position: relative;
+			text-align: center;
+			.pBar{
+				width: 10px;
+				height: 200px;
+				margin: 0 auto;
+				background: #166BAA;
+				position: relative;
+				border-radius: 2px;
+				overflow: hidden;
+				@include flex(0,end,wrap);
+				margin-bottom: 3px;
+				div{
+					width: 100%;
+				}
+			}
+			&.today{
+				.mv-time__list-day{
+					color: black;
+					background: $yellow;
+				}
+				.pBar div{
+					background: $yellow !important;
+				}
+			}
+		}
+		&-day{
+			display: block;
+			padding: 5px 0;
+			border-radius: 5px;
+			span{
+				display: block;
+				font-weight: bold;
+			}
+		}
+	}
+	&__btn{
+		@include flex(center,center);
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		bottom: 10px;
+		&:after{
+			content: "";
+			border: solid $yellow;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: 4px;
+		}
+		&.disabled{
+			opacity: 0.5;
+			pointer-events: none;
+		}
+		&--prev{
+			left: 10px;
+			&:after{
+				transform: rotate(135deg);
+			}
+		}
+		&--next{
+			right: 10px;
+			&:after{
+				transform: rotate(-45deg);
+			}
+		}
+	}
+	&__oder{
+		&-item{
+			@include flex(center,0,wrap);
+			border-bottom: 1px solid #D9D9D9;
+			padding: 10px 0;
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+		&-ttl{
+			display: block;
+			position: relative;
+			@include font-size(10);
+			font-weight: bold;
+			padding: 0 0 0 14px;
+			margin-bottom: 5px;
+			&:before{
+				content: "";
+				width: 9px;
+				height: 10px;
+				background: url("../img/clock.png")no-repeat;
+				background-size: 100%;
+				position: absolute;
+				top: 1px;
+				left: 0;
+			}
+		}
+		&-number{
+			width: 100%;
+			@include flex(center,end,wrap);
+			@include font-size(24);
+			line-height: 1;
+			font-weight: bold;
+			small{
+				@include font-size(14);
+				display: inline-block;
+				position: relative;
+				top: -1px;
+				margin: 0 0 0 3px;
+			}
+		}
+	}
+}
+
+.sec-test{
+	padding: 50px 0;
+}
+.sec-course{
+	padding: 0 0 50px;
+}
+.course-block{
+	margin-bottom: 30px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+.course-list{
+	margin: 0 -20px 0 -5px;
+	.slick-list{
+		padding: 0 15% 0 0 !important;
+	}
+	&__item{
+		padding: 10px 5px;
+	}
+	&__box{
+		border: 1px solid #ccc;
+		padding: 2px;
+		display: block;
+		border-radius: 4px;
+		color: black;
+		@include font-size(10);
+		font-weight: bold;
+		box-shadow: 2px 4px 5px 0 rgba(black,0.1);
+	}
+	&__img{
+		img{
+			width: 100%;
+		}
+	}
+	&__ct{
+
+		padding: 10px 10px 8px;
+	}
+}
+

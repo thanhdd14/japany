@@ -1,0 +1,175 @@
+@use "vars" as *;
+
+
+.c-fc{ //font-color
+	&--white{
+		color: white !important;
+	}
+	&--black{
+		color: black !important;
+	}
+	&--yellow{
+		color: $yellow !important;
+	}
+	&--blue{
+		color: $blue !important;
+	}
+	&--gray{
+		color: $gray !important;
+	}
+}
+
+
+
+
+
+
+
+.c-tx--v {
+	//Vertical writing
+	//display: inline-block;
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+	&-pc{
+		@include mq(md-min) {
+			-ms-writing-mode: tb-rl;
+			writing-mode: vertical-rl;
+		}
+	}
+}
+
+
+
+.c-al{
+	&--c{
+		text-align: center !important;
+	}
+	
+	&--r{
+		text-align: right !important
+	}
+	
+	&--l{
+		text-align: left !important;
+	}
+}
+
+
+
+// Image position control
+.c-pull{
+	&--left{
+		margin-left: calc(((100vw - 100%) / 2) * -1)
+	}
+	&--right{
+		margin-right: calc(((100vw - 100%) / 2) * -1)
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/* ====================================================
+Component
+==================================================== */
+// Common Text style
+.c-txt{
+	&__basic{
+		@include font-size(14);
+		line-height: 1.6;
+		p{
+			margin-bottom: 15px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+
+
+
+//ttl
+.c-ttl{
+	&__01{
+		display: block;
+		@include font-size(16);
+		line-height: 1.4;
+		font-weight: bold;
+		position: relative;
+		padding: 0 0 20px;
+		margin-bottom: 10px;
+		&:after{
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 25px;
+			height: 15px;
+			background: url("../img/dost.png")no-repeat;
+			background-size: 100%;
+		}
+	}
+	&__02{
+		display: block;
+		@include font-size(14);
+		font-weight: bold;
+	}
+}
+
+//btn
+.c-btn{
+	&__01{
+		@include flex(center,center);
+		width: 100%;
+		max-width: 325px;
+		height: 46px;
+		margin: 0 auto;
+		@include font-size(14);
+		font-weight: bold;
+		line-height: 1.2;
+		background: $blue;
+		color: white;
+		text-align: center;
+		border-radius: 4px;
+		position: relative;
+		&:after{
+			content: "";
+			border: solid white;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: 3px;
+			position: absolute;
+			right: 15px;
+			top: 50%;
+			transform: translateY(-50%) rotate(-45deg);
+		}
+	}
+}
+
+
+//fade up
+.js-scrollin {
+	opacity: 0;
+	-webkit-transform: translate(0, 70px);
+	-ms-transform: translate(0, 70px);
+	transform: translate(0, 70px);
+	&.active{
+		opacity: 1;
+		-webkit-transform: translate(0, 0);
+		-ms-transform: translate(0, 0);
+		transform: translate(0, 0);
+		-webkit-transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		-o-transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+		transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+}
+
+
+
