@@ -17,6 +17,9 @@
 	&--gray{
 		color: $gray !important;
 	}
+	&--red{
+		color: $red !important;
+	}
 }
 
 
@@ -118,6 +121,31 @@ Component
 	}
 	&__02{
 		display: block;
+		position: relative;
+		@include font-size(16);
+		line-height: 1.4;
+		font-weight: bold;
+		padding: 5px 0 5px 12px;
+		margin-bottom: 30px;
+		&:before{
+			content: "";
+			width: 5px;
+			border-radius: 4px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			background: $geen;
+		}
+		span{
+			display: block;
+		}
+		.c-ft--en{
+			@include font-size(12);
+		}
+	}
+	&__03{
+		display: block;
 		@include font-size(14);
 		font-weight: bold;
 	}
@@ -126,6 +154,7 @@ Component
 //btn
 .c-btn{
 	&__01{
+		border: none;
 		@include flex(center,center);
 		width: 100%;
 		max-width: 325px;
@@ -139,6 +168,12 @@ Component
 		text-align: center;
 		border-radius: 4px;
 		position: relative;
+		cursor: pointer;
+		@include smooth-transition;
+		&:hover{
+			opacity: 1;
+			background: $geen;
+		}
 		&:after{
 			content: "";
 			border: solid white;
@@ -150,26 +185,13 @@ Component
 			top: 50%;
 			transform: translateY(-50%) rotate(-45deg);
 		}
+		&.disabled,&.hidden1,&.hidden2{
+			background: #C6C6C6;
+			pointer-events: none;
+		}
 	}
 }
 
-
-//fade up
-.js-scrollin {
-	opacity: 0;
-	-webkit-transform: translate(0, 70px);
-	-ms-transform: translate(0, 70px);
-	transform: translate(0, 70px);
-	&.active{
-		opacity: 1;
-		-webkit-transform: translate(0, 0);
-		-ms-transform: translate(0, 0);
-		transform: translate(0, 0);
-		-webkit-transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-		-o-transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-		transition: 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-	}
-}
 
 
 

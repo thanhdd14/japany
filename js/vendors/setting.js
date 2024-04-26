@@ -1,4 +1,13 @@
-//menu header
+function load() {
+    document.body.classList.add('is-hello');
+    setTimeout(function () {
+        $(".is-hello").addClass("active");
+    },1000);
+}
+window.onload = load;
+
+
+
 $('.js-mobile').on('click', function(){
     $(this).toggleClass("js-mobile--close");
     $("html").toggleClass("js-locked");
@@ -36,23 +45,6 @@ $('.js-mobile').on('click', function(){
     
 })(jQuery);
 
-// $('.js-slider-course').slick({
-//     centerMode: true,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     infinite: false,
-//     responsive: [
-//         {
-//             breakpoint: 640,
-//             settings: {
-//                 slidesToShow: 2
-//             }
-//         }
-//     ]
-// });
-// setTimeout(function () {
-//     $(".js-slider-course .slick-track").css("transform","none");
-// },500);
 
 
 var swiper = new Swiper(".js-slider-course", {
@@ -61,8 +53,43 @@ var swiper = new Swiper(".js-slider-course", {
     grabCursor: true,
     breakpoints: {
         640: {
-            slidesPerView: 3.5,
+            slidesPerView: 4,
         }
     }
     
 });
+
+$(document).ready(function(){
+    $('.form-control--id').blur(function() {
+        if( !$(this).val() ) {
+           $(".c-btn__01").addClass("hidden1")
+        }
+        else {
+            $(".c-btn__01").removeClass("hidden1")
+        }
+    });
+    $('.form-control--pass').blur(function() {
+        if( !$(this).val() ) {
+            $(".c-btn__01").addClass("hidden2")
+        }
+        else {
+            $(".c-btn__01").removeClass("hidden2")
+        }
+    });
+});
+
+$('.js-show-pass').click(function(){
+    $(this).toggleClass('show');
+    let input = $(this).prev();
+    input.attr('type', input.attr('type') === 'password' ? 'text' : 'password');
+});
+
+
+$('.language').change(function() {
+    if(!!$(this).val()){
+        $(".c-btn__01").removeClass("disabled");
+    }
+    else{
+        $(".c-btn__01").addClass("disabled");
+    }
+}).change();

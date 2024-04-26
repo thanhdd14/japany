@@ -1,0 +1,44 @@
+<main class="page-<%= pageData.template %>">
+	<section class="sec-content">
+		<div class="inner">
+			<h1 class="c-ttl__02">
+				<span class="c-ft--jp">ログイン</span>
+			</h1>
+			<form>
+				<div class="login-block">
+					<div class="login-input c-txt__basic" id="login-input">
+						<dl class="login-input__item">
+							<dt>ID</dt>
+							<dd>
+								<input type="text" class="form-control form-control--id">
+							</dd>
+						</dl>
+						<dl class="login-input__item">
+							<dt>Password</dt>
+							<dd>
+								<div class="show-pass">
+									<input type="password" class="form-control form-control--pass">
+									<span class="js-show-pass"></span>
+								</div>
+							</dd>
+						</dl>
+						<div class="login-note">
+							半角英数字（大文字・小文字）を含めた8桁以上を入力してください
+						</div>
+						<p class="error">エラーが発生しました</p>
+					</div>
+					<div class="login-sub">
+						<button type="submit" class="c-btn__01 hidden1 hidden2">
+							ログイン
+						</button>
+						<div class="login-note c-al--c">
+							IDを忘れてしまった場合は<a href="">こちら</a><br>
+							パスワードを忘れてしまった場合は<a href="">こちら</a>
+						</div>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</section>
+</main>
