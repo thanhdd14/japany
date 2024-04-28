@@ -93,3 +93,39 @@ $('.language').change(function() {
         $(".c-btn__01").addClass("disabled");
     }
 }).change();
+
+
+
+$(document).ready(function() {
+
+});
+
+$( ".check-question__list input" ).change(function() {
+    var checked_anwsers = $('.check-question__list input:checked');
+    var checked_anwsers_len = checked_anwsers.length;
+    if (checked_anwsers_len === 1 ){
+        $(".check-bar__line .lv").addClass("lv-01");
+    }
+    if (checked_anwsers_len === 2 ){
+        $(".check-bar__line .lv").addClass("lv-02");
+        $(".check-bar__line .lv").removeClass("lv-01");
+    }
+    if (checked_anwsers_len === 3 ){
+        $(".check-bar__line .lv").addClass("lv-03");
+        $(".check-bar__line .lv").removeClass("lv-02");
+    }
+    if (checked_anwsers_len === 4 ){
+        $(".check-bar__line .lv").addClass("lv-04");
+        $(".check-bar__line .lv").removeClass("lv-03");
+    }
+    if (checked_anwsers_len === 5 ){
+        $(".check-bar__line .lv").addClass("lv-05");
+        $(".check-bar__line .lv").removeClass("lv-04");
+    }
+    if (checked_anwsers_len === 5 ){
+        $(".c-btn__01").removeClass("disabled");
+    }
+    else{
+        $(".c-btn__01").addClass("disabled");
+    }
+});

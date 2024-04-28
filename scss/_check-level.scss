@@ -1,0 +1,225 @@
+@use "vars" as *;
+
+.sec-check{
+	padding: 130px 0 50px;
+}
+.check-bar{
+	position: fixed;
+	top: 61px;
+	left: 0;
+	right: 0;
+	background: white;
+	border-bottom: 1px solid #ccc;
+	padding:  15px;
+	@include font-size(12);
+	color: $blue;
+	z-index: 3;
+	&__line{
+		display: block;
+		margin: 10px 0;
+		height: 10px;
+		background: #E5E5E5;
+		position: relative;
+		.lv{
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 0;
+			background: $blue;
+			&-01{
+				width: 20%;
+			}
+			&-02{
+				width: 40%;
+			}
+			&-03{
+				width: 60%;
+			}
+			&-04{
+				width: 80%;
+			}
+			&-05{
+				width: 100%;
+			}
+		}
+	}
+	&__time{
+		&-ttl{
+			display: block;
+			position: relative;
+			padding: 0 0 0 15px;
+			&:before{
+				content: "";
+				width: 10px;
+				height: 10px;
+				background: url("../img/clock-blue.png")no-repeat;
+				background-size: 100%;
+				position: absolute;
+				top: 6px;
+				left: 0;
+			}
+		}
+		&--start{
+			.time{
+				display: inline-block;
+				padding: 0 0 0 5px;
+				@include font-size(16);
+				font-weight: bold;
+			}
+		}
+		&--end{
+			@include flex(end,center,wrap);
+			.time{
+				display: inline-block;
+				padding: 0 0 0 5px;
+				@include font-size(14);
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.check-question{
+
+	&__step{
+		@include flex(end,center,wrap);
+		@include font-size(16);
+		&-note{
+			@include font-size(12);
+			margin-left: 7px;
+		}
+		span{
+			display: inline-block;
+
+		}
+	}
+	&__list{
+		&-item{
+			border-bottom: 1px solid #ccc;
+			padding-bottom: 30px;
+			margin-bottom: 30px;
+			&:last-child{
+				border-bottom: none;
+			}
+		}
+	}
+}
+.question-lv{
+	display: block;
+	@include font-size(16);
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.question-note{
+	display: inline-block;
+	background: $geen;
+	color: white;
+	@include font-size(12);
+	border-radius: 4px;
+	padding: 7px 13px;
+	margin-bottom: 15px;
+}
+
+.show-question{
+	&__note{
+		display: block;
+		@include font-size(12);
+		margin-bottom: 20px;
+	}
+	&__all{
+		border: 1px solid #ccc;
+		padding: 15px 0 30px;
+		margin-bottom: 30px;
+		box-shadow: 2px 2px 5px 0 rgba(black,0.2);
+	}
+	&__list{
+		padding: 0 15px;
+		margin-bottom: 15px;
+		dl{
+			border-bottom: 1px solid #ccc;
+			@include flex(between,end);
+			@include font-size(12);
+			line-height: 1;
+			padding: 10px 0;
+			dt{
+				strong{
+					display: block;
+					@include font-size(14);
+					margin-bottom: 5px;
+				}
+				span{
+					display: block;
+					color: #676767;
+					@include font-size(12);
+				}
+			}
+			dd{
+
+			}
+		}
+		&-oder{
+			@include flex(end,end);
+			.c-fc--geen{
+				@include font-size(14);
+				font-weight: bold;
+				position: relative;
+				top: 2px;
+			}
+			span{
+				display: block;
+				margin: 0 3px;
+			}
+		}
+	}
+	&__total{
+		padding: 0 15px;
+		dl{
+			@include flex(between,end);
+			@include font-size(12);
+			line-height: 1;
+			padding: 10px 0;
+			dt{
+				position: relative;
+				padding-left: 10px;
+				strong{
+					display: block;
+					@include font-size(14);
+					margin-bottom: 5px;
+					position: relative;
+					&:before{
+						content: "";
+						width: 5px;
+						height: 5px;
+						border-radius: 50%;
+						background: #8ec43d;
+						position: absolute;
+						top: 3px;
+						left: -8px;
+					}
+				}
+				span{
+					display: block;
+					color: #676767;
+					@include font-size(12);
+				}
+			}
+			dd{
+
+			}
+		}
+		&-oder{
+			@include flex(end,end);
+			.c-fc--geen{
+				@include font-size(24);
+				font-weight: bold;
+				position: relative;
+				top: 2px;
+			}
+			span{
+				display: block;
+				margin: 0 3px;
+			}
+		}
+	}
+}
