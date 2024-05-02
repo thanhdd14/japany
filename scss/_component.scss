@@ -28,7 +28,11 @@
 	}
 }
 
-
+.c-bg{
+	&--red{
+		background: $red !important;
+	}
+}
 
 
 

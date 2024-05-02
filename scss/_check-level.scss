@@ -86,7 +86,9 @@
 }
 
 .check-question{
-
+	&--result{
+		padding: 15px 10px;
+	}
 	&__step{
 		@include flex(end,center,wrap);
 		@include font-size(16);
@@ -106,6 +108,18 @@
 			margin-bottom: 30px;
 			&:last-child{
 				border-bottom: none;
+			}
+		}
+		&--result{
+			pointer-events: none;
+			.check-question__list-item{
+				@include flex(0,center,wrap);
+			}
+			.question-lv{
+				margin: 0 10px 15px;
+			}
+			.content-layout{
+				width: 100%;
 			}
 		}
 	}
@@ -175,6 +189,7 @@
 				display: block;
 				margin: 0 3px;
 			}
+
 		}
 	}
 	&__total{
@@ -210,7 +225,9 @@
 				}
 			}
 			dd{
-
+				.c-fc--geen{
+					color: #F0AE00 !important;
+				}
 			}
 		}
 		&-oder{
