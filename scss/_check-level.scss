@@ -66,6 +66,9 @@
 				padding: 0 0 0 5px;
 				@include font-size(16);
 				font-weight: bold;
+				&.c-fc--geen{
+					color: #F0AE00 !important;
+				}
 			}
 		}
 		&--end{
@@ -88,6 +91,7 @@
 .check-question{
 	&--result{
 		padding: 15px 10px;
+		font-weight: bold;
 	}
 	&__step{
 		@include flex(end,center,wrap);
