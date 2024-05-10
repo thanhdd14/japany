@@ -213,3 +213,39 @@ main{
 	}
 }
 
+
+
+.popup{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 15px;
+	display: none;
+	background: rgba(black,0.2);
+	z-index: 999;
+	&.active{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&-block{
+		width: 100%;
+		max-width: 500px;
+		background: white;
+		text-align: center;
+		@include font-size(14);
+		font-weight: bold;
+		padding: 30px 15px;
+		&__ttl{
+			display: block;
+			min-height: 80px;
+		}
+		img{
+			display: block;
+			width: 110px;
+			margin: 0 auto 40px;
+		}
+	}
+}
