@@ -2,8 +2,9 @@ function load() {
     document.body.classList.add('is-hello');
     setTimeout(function () {
         $(".is-hello").addClass("active");
-    },1000);
+    }, 500);
 }
+
 window.onload = load;
 
 

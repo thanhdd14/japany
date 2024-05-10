@@ -7,7 +7,7 @@
 	right: 0;
 	@include flex(center,center,wrap);
 	padding: 15px;
-	z-index: 999;
+	z-index: 9999;
 	background: white;
 	border-bottom: 1px solid #ccc;
 	.header-logo{
@@ -173,5 +173,110 @@
 	touch-action: none;
 	body {
 		-webkit-overflow-scrolling: auto;
+	}
+}
+
+.loading{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	background: white;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 62px;
+		left: 0;
+		margin: auto;
+		background: #198BCE;
+		width: 0;
+		height: 4px;
+		@include smooth-transition;
+	}
+	&-sub{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+		opacity: 0;
+		visibility: hidden;
+		background: white;
+		&.active{
+			z-index: 999;
+			opacity: 1;
+			visibility: visible;
+		}
+		&__rotate{
+			position: absolute;
+			@include v-align;
+			left: 0;
+			right: 0;
+			display: block;
+			width: 74px;
+			margin: 0 auto;
+		}
+		img{
+			animation: rotate 2s linear infinite;
+		}
+	}
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0)
+	}
+
+	to {
+		transform: rotate(360deg)
+	}
+}
+
+.is-hello{
+	.loading{
+		&:before{
+			width: 100%;
+		}
+	}
+	&.active{
+		.loading{
+			display: none;
+		}
+	}
+	.mv-heading{
+		opacity: 1;
+		transform: translate(0, 0);
+		transition-delay: 2.6s;
+	}
+}
+@keyframes byeShutter {
+	70% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		display: none;
+		z-index: -1;
+	}
+}
+@keyframes shutterOpen {
+	0% {
+		width: 0;
+		height: 1px;
+	}
+	50% {
+		width: 100%;
+		height: 1px;
+	}
+	90% {
+		width: 100%;
+		height: 100%;
+	}
+	100% {
+		width: 100%;
+		height: 100%;
 	}
 }

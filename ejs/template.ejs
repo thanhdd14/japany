@@ -19,11 +19,19 @@
 	<%- include(pageData.template, {datalabel:'data'}) %>
 	<%- include('common/_footer'); %>
 
-<!--	<div class="loading">-->
-<!--		<div class="loading-show">-->
-<!--			<img src="<%= RELATIVE_PATH %>img/logo-loading.png" alt="Japany">-->
-<!--		</div>-->
-<!--	</div>-->
+
+
+	<% if(pageData.template == "index"){ %>
+		<div class="loading"></div>
+	<% }
+	else { %>
+
+	<% } %>
+	<div class="loading-sub">
+		<div class="loading-sub__rotate">
+			<img src="<%= RELATIVE_PATH %>img/loading.png" alt="loading">
+		</div>
+	</div>
 	<script src="<%= RELATIVE_PATH %>js/vendors/jquery-3.6.0.min.js"></script>
 	<script src="<%= RELATIVE_PATH %>js/vendors/swiper.js"></script>
 	<script src="<%= RELATIVE_PATH %>js/vendors/setting.js"></script>
