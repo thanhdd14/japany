@@ -117,7 +117,7 @@ Component
 		font-weight: bold;
 		position: relative;
 		padding: 0 0 20px;
-		margin-bottom: 10px;
+		margin-bottom: 30px;
 		&:after{
 			content: "";
 			position: absolute;
@@ -194,6 +194,32 @@ Component
 			right: 15px;
 			top: 50%;
 			transform: translateY(-50%) rotate(-45deg);
+		}
+		&.disabled,&.hidden1,&.hidden2{
+			background: #C6C6C6;
+			pointer-events: none;
+		}
+	}
+	&__02{
+		border: none;
+		@include flex(center,center);
+		width: 100%;
+		max-width: 80px;
+		height: 46px;
+		margin: 0 auto;
+		@include font-size(20);
+		font-weight: bold;
+		line-height: 1.2;
+		background: #8cd4f4;
+		color: white;
+		text-align: center;
+		border-radius: 4px;
+		position: relative;
+		cursor: pointer;
+		@include smooth-transition;
+		&:hover{
+			opacity: 1;
+			background: $geen;
 		}
 		&.disabled,&.hidden1,&.hidden2{
 			background: #C6C6C6;

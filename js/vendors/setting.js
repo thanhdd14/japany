@@ -130,3 +130,13 @@ $( ".check-question__list input" ).change(function() {
         $(".c-btn__01").addClass("disabled");
     }
 });
+
+$(function () {
+    $(".target-tab li").click(function () {
+        var num = $(".target-tab li").index(this);
+        $(".tab-content .item").removeClass('active');
+        $(".tab-content .item").eq(num).addClass('active');
+        $(".target-tab li").removeClass('active');
+        $(this).addClass('active')
+    });
+});
