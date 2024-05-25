@@ -140,3 +140,8 @@ $(function () {
         $(this).addClass('active')
     });
 });
+
+jQuery('.js-btn').click(function(e) {
+    $(this).next(".box-note").toggleClass("active")
+    e.preventDefault();
+});

@@ -310,3 +310,40 @@ main{
 		}
 	}
 }
+.relative{
+	max-width: 325px;
+	margin: 0 auto;
+	position: relative;
+	.c-btn__01{
+		&.disabled{
+			&:after{
+				display: none;
+			}
+		}
+	}
+	.box-note{
+		background: white;
+		@include font-size(14);
+		padding: 10px 12px;
+		border-radius: 3px;
+		position: absolute;
+		top: calc(100% - 5px);
+		right: 0;
+		display: none;
+		box-shadow: 4px 4px 8px 0 rgba(black,0.25);
+		&.active{
+			display: block;
+		}
+	}
+}
+.register{
+	@include flex(center,center,wrap);
+	width: 40px;
+	height: 46px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.course-list{
+	margin-bottom: 15px;
+}
