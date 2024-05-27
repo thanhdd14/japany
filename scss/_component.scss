@@ -199,6 +199,11 @@ Component
 			background: #C6C6C6;
 			pointer-events: none;
 		}
+		&.btn-setting01.btn-setting02.btn-setting03{
+			background: $blue !important;
+			color: white !important;
+			pointer-events: auto !important;
+		}
 	}
 	&__02{
 		border: none;

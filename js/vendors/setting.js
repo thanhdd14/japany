@@ -96,6 +96,31 @@ $('.language').change(function() {
 }).change();
 
 
+$('.setting01').change(function() {
+    if(!!$(this).val()){
+        $(".c-btn__01").addClass("btn-setting01");
+    }
+    else{
+        $(".c-btn__01").removeClass("btn-setting01");
+    }
+}).change();
+$('.setting02').change(function() {
+    if(!!$(this).val()){
+        $(".c-btn__01").addClass("btn-setting02");
+    }
+    else{
+        $(".c-btn__01").removeClass("btn-setting02");
+    }
+}).change();
+$('.setting03').change(function() {
+    if(!!$(this).val()){
+        $(".c-btn__01").addClass("btn-setting03");
+    }
+    else{
+        $(".c-btn__01").removeClass("btn-setting03");
+    }
+}).change();
+
 
 $(document).ready(function() {
 

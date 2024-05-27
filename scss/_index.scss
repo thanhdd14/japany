@@ -347,3 +347,36 @@ main{
 .course-list{
 	margin-bottom: 15px;
 }
+
+.setting-block{
+	width: 100%;
+	counter-reset: section;
+	.item{
+		margin-bottom: 30px;
+	}
+	&--all{
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-ms-flex-line-pack: justify;
+		align-content: space-between;
+		min-height: calc(100vh - 210px);
+	}
+	&__ttl{
+		display: block;
+		position: relative;
+		font-weight: bold;
+		@include font-size(14);
+		padding: 0 0 0 15px;
+		margin-bottom: 5px;
+		&:before{
+			counter-increment: section;
+			content: counters(section, ".") ".";
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: #F0AE00;
+		}
+	}
+}
