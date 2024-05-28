@@ -25,6 +25,9 @@
 	}
 	&--geen{
 		color: $geen !important;
+		&-02{
+			color: #f0ae00 !important;
+		}
 	}
 }
 
@@ -159,6 +162,16 @@ Component
 		@include font-size(14);
 		font-weight: bold;
 	}
+	&__04{
+		display: block;
+		color: white;
+		background: $geen;
+		@include font-size(16);
+		font-weight: bold;
+		padding: 5px 10px;
+		border-radius: 3px 3px 0 0;
+		margin-bottom: 25px;
+	}
 }
 
 //btn
@@ -203,6 +216,9 @@ Component
 			background: $blue !important;
 			color: white !important;
 			pointer-events: auto !important;
+		}
+		&--gray{
+			background: #C6C6C6;
 		}
 	}
 	&__02{

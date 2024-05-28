@@ -170,3 +170,19 @@ jQuery('.js-btn').click(function(e) {
     $(this).next(".box-note").toggleClass("active")
     e.preventDefault();
 });
+
+$('.js-open-popup-links').on('click', function(e){
+    $(".popup-links").addClass("active");
+    e.preventDefault();
+});
+$('.js-open-popup-sub').on('click', function(e){
+    $(".popup-sub").addClass("active");
+    e.preventDefault();
+});
+$('.js-close').on('click', function(){
+    $(".popup").removeClass("active");
+});
+$('.content-other-ttl').on('click', function(){
+    $(this).toggleClass("active");
+    $(this).next(".content-other-list").slideToggle();
+});

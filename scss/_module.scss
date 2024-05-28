@@ -62,6 +62,12 @@ select.form-control{
 
 
 .pure-list{
+	li{
+		margin-bottom: 10px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
 	&__input{
 		position: relative;
 		input{
@@ -118,11 +124,19 @@ select.form-control{
 							transform: scale(1);
 						}
 					}
+					& + .true{
+						color: #181E3D;
+						font-weight: 400;
+						padding-right: 20px;
+						background: url("../img/check.png")no-repeat;
+						background-position: right;
+						background-size: 14px;
+					}
 				}
 			}
 		}
 		span{
-			display: block;
+			display: inline;
 			position: relative;
 			padding: 5px 0 5px 20px;
 			vertical-align: middle;
@@ -151,6 +165,20 @@ select.form-control{
 				transform: scale(0);
 				transform-origin: 50%;
 				transition: transform .2s ease-out;
+			}
+			small{
+				display: block;
+				position: absolute;
+				top: -5px;
+				font-size: 8px;
+				left: 18px;
+				right: 0;
+				text-align: center;
+			}
+			&.true{
+				color: #FF0000;
+				font-weight: bold;
+
 			}
 		}
 	}

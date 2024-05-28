@@ -240,12 +240,18 @@ main{
 		padding: 30px 15px;
 		&__ttl{
 			display: block;
-			min-height: 80px;
+			min-height: 70px;
 		}
 		img{
 			display: block;
 			width: 110px;
 			margin: 0 auto 40px;
+		}
+		.c-btn__01{
+			margin-bottom: 15px;
+			&:last-child{
+				margin-bottom: 0;
+			}
 		}
 	}
 	&-error{
@@ -377,6 +383,143 @@ main{
 			top: 0;
 			left: 0;
 			color: #F0AE00;
+		}
+	}
+}
+.mv-video{
+	margin-bottom: 40px;
+	video {
+		width: 100%;
+	}
+}
+
+
+.note-small{
+	padding: 13px 0 0;
+	margin-bottom: 15px;
+	span{
+		display: inline-block;
+		position: relative;
+		margin-right: 80px;
+		&:after{
+			content: "";
+			position: absolute;
+			bottom: 4px;
+			left: calc(100% + 15px);
+			width: 50px;
+			height: 1px;
+			background: #181e3d;
+		}
+		&:last-child{
+			margin-right: 0;
+			&:after{
+				display: none;
+			}
+		}
+		small{
+			position: absolute;
+			bottom: calc(100% + 2px);
+			left: 0;
+			right: 0;
+			text-align: center;
+			@include font-size(8);
+		}
+	}
+}
+
+.check-question{
+	&__sub{
+		&-link{
+			border-bottom: 1px solid #ccc;
+			padding-bottom: 30px;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.content-other{
+	background: #F8F8F8;
+	margin-top: 70px;
+	&-ttl{
+		display: block;
+		background: #676767;
+		color: white;
+		@include font-size(14);
+		cursor: pointer;
+		position: relative;
+		border-radius: 4px;
+		padding: 10px;
+		&:after{
+			content: "";
+			border: solid white;
+			border-width: 0 2px 2px 0;
+			display: inline-block;
+			padding: 3px;
+			transform: rotate(45deg);
+			position: absolute;
+			top: 14px;
+			right: 12px;
+		}
+		&.active{
+			border-radius: 4px 4px 0 0;
+			&:after{
+				top: 16px;
+				transform: rotate(-135deg);
+			}
+		}
+	}
+	&-list{
+		display: none;
+		padding: 10px;
+		font-weight: bold;
+		.item{
+			background: white;
+			box-shadow: 0 2px 3px rgba(#D5D5D5,0.9);
+			padding: 0 10px 10px;
+			border-radius: 4px;
+			overflow: hidden;
+			margin-bottom: 30px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		&__heading{
+			margin: 0 -10px;
+			background: #8EC43D;
+			@include flex(between,center,wrap);
+			color: white;
+			@include font-size(12);
+			padding: 5px 10px;
+			margin-bottom: 10px;
+			.time{
+				position: relative;
+				padding-left: 15px;
+				&:before{
+					content: "";
+					width: 10px;
+					height: 10px;
+					background: url(../img/clock-white.png) no-repeat;
+					background-size: 100%;
+					position: absolute;
+					top: 3px;
+					left: 0;
+				}
+			}
+		}
+		&__status{
+			display: inline-block;
+			@include font-size(10);
+			padding: 5px 8px;
+			color: white;
+			background: #F0AE00;
+			border-radius: 4px;
+			margin-bottom: 10px;
+		}
+		&__ttl{
+			display: block;
+			@include font-size(16);
+			font-weight: bold;
+			margin-bottom: 10px;
 		}
 	}
 }
