@@ -5,6 +5,9 @@
 	&--detail{
 		padding-top: 84px;
 	}
+	&--list{
+		padding-top: 40px;
+	}
 }
 .check-bar{
 	position: fixed;
@@ -87,6 +90,13 @@
 				@include font-size(14);
 				font-weight: bold;
 			}
+		}
+	}
+	&--list{
+		position: static;
+		border-bottom: none;
+		.check-bar__time{
+			@include flex(end,center,wrap);
 		}
 	}
 }

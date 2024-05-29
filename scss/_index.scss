@@ -468,8 +468,10 @@ main{
 			}
 		}
 	}
-	&-list{
+	.content-other-list{
 		display: none;
+	}
+	&-list{
 		padding: 10px;
 		font-weight: bold;
 		.item{

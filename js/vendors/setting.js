@@ -186,3 +186,6 @@ $('.content-other-ttl').on('click', function(){
     $(this).toggleClass("active");
     $(this).next(".content-other-list").slideToggle();
 });
+$('.add-course').on('click', function(){
+    $(this).toggleClass("active");
+});
